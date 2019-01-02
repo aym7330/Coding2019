@@ -1,3 +1,4 @@
+// 같은 수의 조합 구하기
 package datastructure;
 
 import java.util.Scanner;

@@ -1,3 +1,4 @@
+// 한칸씩 자리 옮기기
 package datastructure;
 
 import java.util.Scanner;

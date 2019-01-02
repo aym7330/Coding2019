@@ -1,3 +1,4 @@
+// 소수 구하기
 package datastructure;
 
 public class Code10 {
