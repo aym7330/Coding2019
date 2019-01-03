@@ -1,5 +1,5 @@
 // 연속인 수를 숫자로 만들고 그 수들 중 소수인 중 최댓값
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 

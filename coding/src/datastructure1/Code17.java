@@ -1,5 +1,5 @@
 // 입력한 수까지의 소수를 구함 Code10
-package datastructure;
+package datastructure1;
 
 public class Code17 {
 	public static void main(String[] args) {

@@ -1,5 +1,5 @@
 // ordered list insert
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 

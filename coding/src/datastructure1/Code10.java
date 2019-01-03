@@ -1,5 +1,5 @@
 // 소수 구하기
-package datastructure;
+package datastructure1;
 
 public class Code10 {
 	public static void main(String[] args) {

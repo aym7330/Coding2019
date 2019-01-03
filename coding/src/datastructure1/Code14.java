@@ -1,5 +1,5 @@
 // 버블 정렬
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 

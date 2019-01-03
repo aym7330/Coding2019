@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure1;
 
 public class Code01 {
 	static int num;			// 외부에 선언 가능 but 클래스 외부 선언 불가능

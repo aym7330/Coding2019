@@ -1,5 +1,5 @@
 // 연속적인 수의 최대합
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 

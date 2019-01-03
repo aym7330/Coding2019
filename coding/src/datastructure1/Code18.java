@@ -1,5 +1,5 @@
 // 버블정렬 Code14
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 

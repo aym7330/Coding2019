@@ -1,9 +1,9 @@
-// 한칸씩 자리 옮기기
-package datastructure;
+// 같은 수의 조합 구하기
+package datastructure1;
 
 import java.util.Scanner;
 
-public class Code09 {
+public class Code11 {
 	public static void main(String[] args) {
 		Scanner kb=new Scanner(System.in);
 		int n=kb.nextInt();
@@ -12,14 +12,14 @@ public class Code09 {
 			data[i]=kb.nextInt();
 		}
 		kb.close();
-
-		int temp=data[n-1];
-		for(int i=n-2;i>=0;i--) 
-			data[i+1]=data[i];
-		data[0]=temp;
 		
-		for(int i=0; i<n;i++)
-			System.out.print(data[i]);
+		int count=0;
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+			if(data[i]==data[j])
+				count++;
+			}
+		}
+		System.out.println(count);
 	}
-
 }

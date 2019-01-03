@@ -1,4 +1,4 @@
-package datastructure;
+package datastructure1;
 
 import java.io.File;
 import java.io.FileNotFoundException;

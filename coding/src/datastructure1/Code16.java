@@ -1,6 +1,6 @@
 // 두 정수 a,b를 받아서 a의 b승을 계산
 
-package datastructure;
+package datastructure1;
 
 import java.util.Scanner;
 
