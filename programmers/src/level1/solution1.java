@@ -1,5 +1,5 @@
 // 완주하지 못한 선수
-//
+// https://programmers.co.kr/learn/courses/30/lessons/42576
 /*
  * 1. 배열 비교 'participant'-complement
  * 2. 동일한 사람이 나올 경우  participant-participant
