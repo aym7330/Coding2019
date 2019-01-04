@@ -1,6 +1,7 @@
 package methods;
 
 import java.util.Scanner;
+import java.util.jar.Attributes.Name;
 
 public class Sort {
 	public static void main(String[] args) {
@@ -60,5 +61,17 @@ public class Sort {
 			System.out.println();
 		}
 		kb.close();
+	}
+	public static void stringBubbleSort(int n,String[] str) {
+		for(int i=n-1;i>0;i--) {
+			for(int j=0;j<i;j++) {
+				if(str[j].compareToIgnoreCase(str[j+1])>0) {
+					String temp=str[j];
+					str[j]=str[j+1];
+					str[j+1]=temp;
+				}
+			}
+		}
+		
 	}
 }
