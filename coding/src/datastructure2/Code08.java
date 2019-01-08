@@ -2,7 +2,7 @@ package datastructure2;
 
 import java.util.Scanner;
 
-public class Code8 {
+public class Code08 {
 	static Polynomial3[] polys = new Polynomial3[100];
 	static int n = 0;
 
