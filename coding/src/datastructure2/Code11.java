@@ -3,8 +3,8 @@ package datastructure2;
 import java.util.Scanner;
 
 public class Code11 {
-	static Polynomial4[] polys = new Polynomial4[100];
-	static int n = 0;
+	private static Polynomial4[] polys = new Polynomial4[100];
+	private static int n = 0;
 
 	public void processCommand() {
 		Scanner kb = new Scanner(System.in);
@@ -59,7 +59,7 @@ public class Code11 {
 
 	private int find(char name) {
 		for (int i = 0; i < n; i++)
-			if (polys[i].name == name)
+			if (polys[i].getName() == name)
 				return i;
 		return -1;
 	}

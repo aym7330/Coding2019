@@ -1,9 +1,15 @@
 package datastructure2;
 
 public class Polynomial4 {
-	public char name;
-	public Term4[] terms;
-	public int nTerms;
+	private char name;
+	private Term4[] terms;
+	private int nTerms;
+	
+	public char getName() {
+		return name;
+	}
+
+	
 	public Polynomial4() {
 		nTerms=0;
 		terms=new Term4[100];
@@ -29,11 +35,11 @@ public class Polynomial4 {
 	public void addTerm(int c, int e) {
 		int index=findTerm(e);
 		if(index!=-1) {
-			terms[index].coef+=c;
+			terms[index].setCoef(terms[index].getCoef()+c);
 		}
 		else {
 			int i=nTerms-1;
-			while(i>=0&&terms[i].expo<e) {
+			while(i>=0&&terms[i].getExpo()<e) {
 				terms[i+1]=terms[i];
 				i--;
 			}
@@ -44,9 +50,9 @@ public class Polynomial4 {
 		}
 	}
 
-	public int findTerm(int e) {
-		for(int i=0;i<nTerms &&terms[i].expo>=0;i++) {
-			if(terms[i].expo==e)
+	private int findTerm(int e) {
+		for(int i=0;i<nTerms &&terms[i].getExpo()>=0;i++) {
+			if(terms[i].getExpo()==e)
 				return i;
 		}
 		return -1;
