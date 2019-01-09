@@ -6,7 +6,7 @@
  */
 package level1;
 
-public class solution1 {
+public class solution1_f {
     public String solution(String[] participant, String[] completion) { 	
     	int n=participant.length;
     	String anwser="";   	
