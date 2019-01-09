@@ -34,7 +34,7 @@ public class Code03 {
 		for(int i=n-1;i>0;i++) {
 			for(int j=0;j<i;j++) {
 				if(members[j].name.compareTo(members[j+1].name)>0) {
-					Person1 temp=members[j];
+					Person1 temp=members[j];	// 값을 교환하지 말고 객체의 주소를 교환하면 됨
 					members[j]=members[j+1];
 					members[j+1]=temp;
 				}

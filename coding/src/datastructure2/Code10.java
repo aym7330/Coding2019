@@ -14,6 +14,7 @@ public class Code10 {
 				thePolygon.addVertes(in.nextInt(), in.nextInt());
 			MyPoint2 thePoint=new MyPoint2(in.nextInt(), in.nextInt());
 			in.close();
+			
 			if(thePolygon.contains(thePoint))
 				System.out.println("Yes");
 			else

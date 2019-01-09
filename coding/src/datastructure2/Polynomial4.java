@@ -44,8 +44,6 @@ public class Polynomial4 {
 				i--;
 			}
 			terms[i+1]=new Term4(c,e);
-/*			terms[i+1].coef=c;
-			terms[i+1].expo=e;*/
 			nTerms++;
 		}
 	}
