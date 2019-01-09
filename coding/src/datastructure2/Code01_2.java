@@ -16,13 +16,13 @@ public class Code01_2 {
 		second.name="Tom";
 		System.out.println("Name:"+first.name+",Number:"+first.number);
 
-		Person1[] numbers=new Person1[100];
+		Person1[] numbers=new Person1[100]; // 각 칸에 주소가 저장
 		numbers[0]=first;	// 주소값을 저장
 		numbers[1]=second;
 	    System.out.println("Name:"+numbers[0].name+",Number:"+numbers[0].number);		
 	    System.out.println("Name:"+numbers[1].name+",Number:"+numbers[1].number);		
 	    
-	    numbers[2]=new Person1();
+	    numbers[2]=new Person1();	// 값을 저장할 때 new를 해야 한다.
 	    numbers[2].name="Daivd";
 	    numbers[2].number="887554311";
 	    System.out.println("Name:"+numbers[2].name+",Number:"+numbers[2].number);		
