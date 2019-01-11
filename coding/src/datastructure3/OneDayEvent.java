@@ -13,4 +13,8 @@ public class OneDayEvent extends Event{
 	public String toString() {	//overriding
 		return title+", "+date.toString();
 	}
+	
+	public boolean isRelevant(MyDate date) {
+		return this.date.compareTO(date)==0;
+	}
 }

@@ -14,4 +14,8 @@ public class DurationEvent extends Event{
 	public String toString() {
 		return title+", "+begin.toString()+"~"+end.toString();
 	}
+	
+	public boolean isRelevant(MyDate date) {	//begin <= date <= end
+		return begin.compareTO(date)<=0&&end.compareTO(date)>=0;
+	}
 }

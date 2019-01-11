@@ -30,12 +30,21 @@ public class Scheduler {
 				handleList();
 			}
 			else if (command.equals("show")) {
-
+				handleShow();
 			} else if (command.equals("exit")) {
 				break;
 			}	
 		}
 		kb.close();
+	}
+	private void handleShow() {
+		String dateString=kb.next();
+		MyDate theDate=parseDateString(dateString);
+		for(int i=0;i<n;i++) {
+			// test if events[i] is relevant to the date, then print it;
+			if(events[i].isRelevant(theDate)) 
+				System.out.println(events[i].toString());	// toString overriding(toString = Object class)
+		}
 	}
 	private void handleList() {
 		for(int i=0;i<n;i++) {
@@ -56,9 +65,7 @@ public class Scheduler {
 		String title=kb.next();
 		
 		MyDate date=parseDateString(dateString);
-		OneDayEvent ev= new OneDayEvent(title, date);
-		System.out.println(ev.toString());
-		
+		OneDayEvent ev= new OneDayEvent(title, date);		
 		addEvent(ev);
 		}
 
