@@ -15,16 +15,34 @@ public class Test {	//subclass of Object
 	
 	
 	public static void main(String[] args) {
-		Test test1=new Test();
+/*		Test test1=new Test();
 		Test test2=new Test();
-/*		test2.a=5;
-		test2.x=1.23457;*/
+		test2.a=5;
+		test2.x=1.23457;
 		
 		System.out.println(test1.toString());
 		
 		if(test2.equals(test1))
 			System.out.println("yes");
 		else
-			System.out.println("No");
+			System.out.println("No");*/
+		
+		Object[] array=new Object[100];
+		int a=20;
+		Integer age= new Integer(a);	// wrapping
+		
+		array[0]=age;
+		int b=age.intValue();	// unwrapping
+
+		/*
+		array[0]=a;	// autoboxing
+		int b=(Integer)array[0];	//auto unboxing
+		*/
+		
+		System.out.println(b);
+		
+		String str="1234";
+		int c=Integer.parseInt(str);
+		System.out.println(c);
 	}
 }
