@@ -10,7 +10,7 @@ public class OneDayEvent extends Event{
 		this.date=date;
 	}
 	
-	public String toString() {
+	public String toString() {	//overriding
 		return title+", "+date.toString();
 	}
 }
