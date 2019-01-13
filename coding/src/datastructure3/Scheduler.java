@@ -1,16 +1,19 @@
 package datastructure3;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Scheduler {
-	private int capacity=10;
+//	private int capacity=10;
 /*	OneDayEvent[] ondays=new OneDayEvent[100];
 	DurationEvent[] durations=new DurationEvent[100];
 	DeadlinedEvent[] deadlines=new DeadlinedEvent[100];
 	int n1=0, n2=0, n3=0; */
-	public Event[] events=new Event[capacity];
-	public int n=0;
+	
+	public ArrayList<Event> events=new ArrayList<>();
+//	public Event[] events=new Event[capacity];
+//	public int n=0;
 	private Scanner kb;
 	
 	public void processCommand() {
@@ -34,7 +37,7 @@ public class Scheduler {
 				handleShow();
 			} 
 			else if (command.equals("sort")) {
-				Arrays.sort(events,0,n);
+				Collections.sort(events);
 			}
 			else if (command.equals("exit")) {
 				break;
@@ -45,15 +48,17 @@ public class Scheduler {
 	private void handleShow() {
 		String dateString=kb.next();
 		MyDate theDate=parseDateString(dateString);
-		for(int i=0;i<n;i++) {
+		for(Event ev:events) {
 			// test if events[i] is relevant to the date, then print it;
-			if(events[i].isRelevant(theDate)) 
-				System.out.println(events[i].toString());	// toString overriding(toString = Object class)
+			if(ev.isRelevant(theDate)) { 
+				System.out.println(ev.toString());	// toString overriding(toString = Object class)
 		}
 	}
+	}
 	private void handleList() {
-		for(int i=0;i<n;i++) {
-			System.out.println("  "+events[i].toString());	//dynamic binding
+//		for(int i=0;i<events.size();i++) {
+		for(Event ev:events) {	//enhanced for loop
+			System.out.println("  "+ev.toString());	//dynamic binding
 		}
 	}
 	private void handleAddDeadlinedEvent() {
@@ -93,17 +98,17 @@ public class Scheduler {
 		}
 
 	private void addEvent(Event ev) { // 배열 재할당
-		if(n>=capacity)
-			reallocate();
-		events[n++] = ev;
+/*		if(n>=capacity)
+			reallocate();*/
+		events.add(ev);
 	}
-	private void reallocate() {
+/*	private void reallocate() {
 		Event[] tmp=new Event[capacity*2];
 		for(int i=0;i<n;i++)
 			tmp[i]=events[i];
 		events=tmp;
 		capacity*=2;
-	}
+	}*/
 	private MyDate parseDateString(String dateString) {
 		String[] tokens=dateString.split("/");
 		
