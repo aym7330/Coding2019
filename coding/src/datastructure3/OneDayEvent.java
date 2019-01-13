@@ -15,6 +15,11 @@ public class OneDayEvent extends Event{
 	}
 	
 	public boolean isRelevant(MyDate date) {
-		return this.date.compareTO(date)==0;
+		return this.date.compareTo(date)==0;
 	}
+	
+	public MyDate getRepresentativeDate() {
+		return date;
+	}
+
 }

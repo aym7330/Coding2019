@@ -1,5 +1,6 @@
 package datastructure3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Scheduler {
@@ -31,7 +32,11 @@ public class Scheduler {
 			}
 			else if (command.equals("show")) {
 				handleShow();
-			} else if (command.equals("exit")) {
+			} 
+			else if (command.equals("sort")) {
+				Arrays.sort(events,0,n);
+			}
+			else if (command.equals("exit")) {
 				break;
 			}	
 		}
@@ -52,10 +57,28 @@ public class Scheduler {
 		}
 	}
 	private void handleAddDeadlinedEvent() {
+		System.out.print("  deadline : ");
+		String dateString =kb.next();
+		System.out.print("  title : ");
+		String title=kb.next();
 		
+		MyDate date=parseDateString(dateString);
+		DeadlinedEvent ev=new DeadlinedEvent(title, date);
+		addEvent(ev);
 	}
 	private void handleAddDurationEvent() {
+		System.out.print("  begin : ");
+		String beginString =kb.next();
+		System.out.print("  end : ");
+		String endString=kb.next();
+		System.out.print("  title : ");
+		String title=kb.next();
 		
+		MyDate begin=parseDateString(beginString);
+		MyDate end=parseDateString(endString);
+
+		DurationEvent ev=new DurationEvent(title, begin, end);
+		addEvent(ev);
 	}
 	private void handleAddOneDayEvent() {
 		System.out.print("  when : ");
@@ -69,7 +92,7 @@ public class Scheduler {
 		addEvent(ev);
 		}
 
-	private void addEvent(OneDayEvent ev) { // 배열 재할당
+	private void addEvent(Event ev) { // 배열 재할당
 		if(n>=capacity)
 			reallocate();
 		events[n++] = ev;
@@ -79,7 +102,7 @@ public class Scheduler {
 		for(int i=0;i<n;i++)
 			tmp[i]=events[i];
 		events=tmp;
-		capacity+=2;
+		capacity*=2;
 	}
 	private MyDate parseDateString(String dateString) {
 		String[] tokens=dateString.split("/");

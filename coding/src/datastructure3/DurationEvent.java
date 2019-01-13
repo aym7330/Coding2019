@@ -16,6 +16,10 @@ public class DurationEvent extends Event{
 	}
 	
 	public boolean isRelevant(MyDate date) {	//begin <= date <= end
-		return begin.compareTO(date)<=0&&end.compareTO(date)>=0;
+		return begin.compareTo(date)<=0&&end.compareTo(date)>=0;
+	}
+	
+	public MyDate getRepresentativeDate() {
+		return begin;
 	}
 }

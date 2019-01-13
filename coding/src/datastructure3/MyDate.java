@@ -14,7 +14,7 @@ public class MyDate {
 		return year+"/"+month+"/"+day;
 	}
 	
-	public int compareTO(MyDate other) {
+	public int compareTo(MyDate other) {
 		if(year<other.year
 				||year==other.year&&month<other.month
 				||year==other.year&&month==other.month&&day<other.day)
