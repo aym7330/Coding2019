@@ -22,7 +22,7 @@ public class MyDate {
 		else if(year>other.year
 				||year==other.year&&month>other.month
 				||year==other.year&&month==other.month&&day>other.day)
-			return -1;
+			return 1;
 		else
 			return 0;
 	}
