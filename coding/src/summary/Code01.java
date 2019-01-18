@@ -31,22 +31,22 @@ public class Code01 {
 
 	private void reallocate1() {
 		int[] tmp = new int[capacity * 2];
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 10; i++)	// 배열의 요소 복사 방법 1
 			tmp[i] = arr[i];
-		arr = tmp;
+		arr = tmp;	// tmp에 저장된 주소 값을 arr에 저장한다.
 		capacity *= 2;
 	}
 
 	private void reallocate2() {
 		int[] tmp = new int[capacity * 2];
-		System.arraycopy(arr, 0, tmp, 0, arr.length);
+		System.arraycopy(arr, 0, tmp, 0, arr.length);	// 배열의 요소 복사 방법 2
 		arr = tmp;
 		capacity *= 2;
 	}
 
 	private void reallocate3() {
 		capacity *= 2;
-		arr = Arrays.copyOf(arr, capacity);
+		arr = Arrays.copyOf(arr, capacity);	// 배열의 요소 복사 방법 3
 	}
 	
 
