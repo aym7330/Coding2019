@@ -5,7 +5,7 @@ package level1;
 
 import java.util.Arrays;
 
-public class solution18_f {
+public class solution18 {
 	  public long solution(long n) {
 		  String[] str=String.valueOf(n).split("");
 		  Arrays.sort(str);
@@ -14,7 +14,7 @@ public class solution18_f {
 		  {
 			  sb.append(str[i]);
 		  }   
-	      return  (long)Integer.valueOf(sb.toString());
+	      return  Long.parseLong(sb.toString());
 	  }
 	
 	/*  public long solution(long n) {
@@ -35,7 +35,7 @@ public class solution18_f {
 	  
 	  
 	  public static void main(String[] args) {
-		solution18_f app=new solution18_f();
+		solution18 app=new solution18();
 		System.out.println(app.solution(118372));
 	}
 }
