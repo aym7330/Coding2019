@@ -15,24 +15,7 @@ public class solution18 {
 			  sb.append(str[i]);
 		  }   
 	      return  Long.parseLong(sb.toString());
-	  }
-	
-	/*  public long solution(long n) {
-		  String s=String.valueOf(n);
-		  String[] str=s.split("");
-		  StringBuffer sb=new StringBuffer();
-		  for(int i=9;i>=0;i--) {
-			  s=String.valueOf(i);
-			  for(String tmp:str) {
-				  if(tmp.equals(s))
-					  sb.append(tmp);
-			  }
-		  }
-		  s=sb.toString();
-		  long answer = (long)Integer.valueOf(s);
-	      return answer;
-	  }*/
-	  
+	  }	  
 	  
 	  public static void main(String[] args) {
 		solution18 app=new solution18();
